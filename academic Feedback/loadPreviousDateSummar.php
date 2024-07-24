@@ -24,7 +24,9 @@ $dataForSummarCount = count($dataForSummar);
       </h4>
     </div>
     <div id="collapse1" class="panel-collapse collapse in">
-      <div class="panel-body"><table class="table table-bordered" id="myTable">
+      <div class="panel-body">
+        <div style="overflow-x:auto;">
+        <table class="table table-bordered" id="myTable">
   <thead style="background-color:#1c3961; color:white; font-size:12px;">
     <tr>
       <th style="color:white;">Batch</th>
@@ -44,6 +46,7 @@ $dataForSummarCount = count($dataForSummar);
       <th style="color:white;">Number of LIVE Queries (approx.)</th>
       <th style="color:white;">Miscellaneous</th>
       <th style="color:white;">View Form</th>
+      <th style="color:white;">Download</th>
       
 
     </tr>
@@ -75,6 +78,11 @@ $dataForSummarCount = count($dataForSummar);
       if($dataForSummar[$summary]['overall_rating_for_the_class'] != ""){?>
       
       <td><a class="view_checklist_detail" data-checklist_id="<?php echo $dataForSummar[$summary]['checklist_id'];?>"><button type="button"  class="btn btn-info" data-toggle="modal" data-target="#myModal">View</button></a></td>
+      <td>
+          <a href="download_academic_feedback.php?checklist_id=<?php echo $dataForSummar[$summary]['checklist_id'];?>"> 
+          <button type="button"  class="btn btn-info">Download</button>
+        </a>
+      </td>
       <?php
 
       }else{?>
@@ -99,6 +107,7 @@ $dataForSummarCount = count($dataForSummar);
   </tbody>   
   </table>
 </div>
+    </div>
     </div>
   </div>
 </div> 
