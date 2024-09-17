@@ -4,6 +4,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head> -->
 <?php
+error_reporting(0);
 session_start();
 include('../database_connection.php');
 include('../testing/testing_functions.php');
@@ -15,7 +16,7 @@ if(!isset($_SESSION['admin_id'])){
 <?php 
 $selectedDate = trim($_POST['selecteddate']);
 
-$query="SELECT * FROM checklist_record WHERE class_date = '$selectedDate'";
+$query="SELECT * FROM checklist_record WHERE class_date = '$selectedDate' AND testing_started_at IS NULL";
 
 $run = mysqli_query($connect,$query);
 while($data = mysqli_fetch_assoc($run)){
