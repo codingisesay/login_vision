@@ -35,6 +35,7 @@ if(!isset($_SESSION['admin_id'])){
 			<button type="button" class="btn btn-info" id="insert_lnternet_line">Internet Line</button>
 			<button type="button" class="btn btn-info" id="insert_tech_support_person">Tech Person</button>
 			<a href="delete_checklist.php" type="button" class="btn btn-danger">Delete</a>
+			<a href="edit_batch.php" type="button" class="btn btn-success">Edit Batch</a>
 			<a href="admin_logout.php" type="button" class="btn btn-info">LogOut</a>
 			<!-- <button type="submit" id="create_checklist">Create Checklist</button> -->
 			
